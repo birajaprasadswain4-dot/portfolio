@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Biraja Prasad Swain – Cloud & DevOps Engineer</title>
+<style>
+:root{--bg:#F6F3EC;--panel:#FFFFFF;--ink:#14182A;--muted:#5B6074;--line:#DDD6C6;--gold:#9A6B1F;--ice:#2D5BD0;--glass:rgba(255,255,255,.7);color-scheme:light;
+--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#070A12;--panel:#0E1424;--ink:#EEF0F8;--muted:#9AA2BA;--line:#1F2840;--gold:#E3BE76;--ice:#86B4FF;--glass:rgba(14,20,36,.7);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#070A12;--panel:#0E1424;--ink:#EEF0F8;--muted:#9AA2BA;--line:#1F2840;--gold:#E3BE76;--ice:#86B4FF;--glass:rgba(14,20,36,.7);color-scheme:dark}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 var(--sans);overflow-x:hidden;-webkit-text-size-adjust:100%}
+a{color:var(--gold)}
+:focus-visible{outline:3px solid var(--ice);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 clamp(18px,5vw,40px)}
+#glow{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(420px circle at var(--mx,70%) var(--my,20%),color-mix(in srgb,var(--gold) 16%,transparent),transparent 70%)}
+main,header,footer{position:relative;z-index:1}
+#bar{position:fixed;top:0;left:0;right:0;height:2px;z-index:50;transform:scaleX(0);transform-origin:0 50%;background:linear-gradient(90deg,var(--gold),var(--ice))}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--glass);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font:600 1.1rem var(--serif);color:var(--ink);text-decoration:none;letter-spacing:.02em}
+.top nav{display:flex;gap:22px;align-items:center}
+.top nav a{color:var(--muted);text-decoration:none;font-size:.92rem;transition:color .2s}
+.top nav a:hover{color:var(--gold)}
+#th{background:none;border:1px solid var(--line);color:var(--ink);width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:1rem;transition:transform .3s,border-color .3s}
+#th:hover{transform:rotate(25deg);border-color:var(--gold)}
+.hero{position:relative;overflow:hidden;min-height:calc(100svh - 60px);display:flex;align-items:center}
+#net{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding-top:40px;padding-bottom:40px}
+.open{display:inline-flex;align-items:center;gap:9px;margin:0 0 22px;padding:6px 14px;border:1px solid var(--line);border-radius:99px;background:var(--glass);backdrop-filter:blur(8px);font-size:.86rem;font-weight:600}
+.dot{width:9px;height:9px;border-radius:50%;background:#35C58B;animation:ping 1.8s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 #35C58B}70%,100%{box-shadow:0 0 0 10px transparent}}
+h1{font:600 clamp(2.8rem,8vw,5.6rem)/1 var(--serif);letter-spacing:-.025em;margin:0 0 20px}
+h1 .w{display:inline-block;white-space:nowrap}
+h1 .c{display:inline-block;opacity:0;transform:translateY(60%) rotate(4deg);animation:ch .8s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--i)*38ms + 150ms)}
+@keyframes ch{to{opacity:1;transform:none}}
+.role{font:500 1.25rem var(--serif);font-style:italic;color:var(--gold);margin:0 0 16px}
+.type{min-height:1.7em;margin:0 0 18px;color:var(--muted);font-size:1.02rem}
+.caret{display:inline-block;width:2px;height:1.05em;margin-left:3px;vertical-align:-.15em;background:var(--gold);animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.lede{max-width:50ch;color:var(--muted);margin:0 0 30px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{position:relative;overflow:hidden;display:inline-block;padding:13px 24px;border-radius:99px;border:1px solid var(--gold);color:var(--gold);text-decoration:none;font-weight:600;transition:transform .25s,box-shadow .25s,background .25s,color .25s;will-change:transform}
+.btn.main{background:var(--gold);color:var(--bg)}
+.btn.main::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.45) 50%,transparent 65%);transform:translateX(-120%);animation:sh 4s ease-in-out infinite}
+@keyframes sh{55%,100%{transform:translateX(120%)}}
+.btn:hover{box-shadow:0 12px 30px color-mix(in srgb,var(--gold) 35%,transparent)}
+.btn.alt:hover{background:var(--gold);color:var(--bg)}
+figure{margin:0;padding:20px;border:1px solid var(--line);border-radius:24px;background:var(--glass);backdrop-filter:blur(10px);animation:fl 7s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-10px)}}
+figcaption{font-size:.84rem;color:var(--muted);margin-top:8px}
+svg{width:100%;height:auto;display:block}
+svg text{font:600 12px var(--sans);fill:var(--ink)}
+svg .sub{font-weight:400;fill:var(--muted);font-size:10.5px}
+svg .box{fill:var(--panel);stroke:var(--gold);stroke-width:1.5}
+svg .zone{fill:none;stroke:var(--line);stroke-width:1.4;stroke-dasharray:5 4}
+svg .flow{stroke:var(--ice);stroke-width:2;fill:none;stroke-dasharray:5 6;animation:rn 1.4s linear infinite}
+@keyframes rn{to{stroke-dashoffset:-22}}
+svg .pkt{fill:var(--ice);filter:drop-shadow(0 0 6px var(--ice))}
+.marq{border-block:1px solid var(--line);overflow:hidden;padding:18px 0;background:var(--glass)}
+.marq div{display:flex;gap:44px;width:max-content;animation:mq 34s linear infinite}
+.marq:hover div{animation-play-state:paused}
+.marq span{font:italic 500 1.5rem var(--serif);color:var(--muted);white-space:nowrap}
+@keyframes mq{to{transform:translateX(-50%)}}
+section{padding:90px 0 20px}
+h2{font:600 clamp(2rem,4.4vw,3rem)/1.1 var(--serif);letter-spacing:-.015em;margin:0 0 14px}
+.sub2{color:var(--muted);max-width:56ch;margin:0 0 40px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:60px}
+.stat{padding:22px;border:1px solid var(--line);border-radius:18px;background:var(--panel)}
+.stat b{display:block;font:600 2.6rem/1 var(--serif);color:var(--gold)}
+.stat span{color:var(--muted);font-size:.92rem}
+.bento{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{position:relative;padding:24px;border:1px solid var(--line);border-radius:20px;background:var(--panel);overflow:hidden;transition:transform .35s,border-color .35s}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(260px circle at var(--x,50%) var(--y,0%),color-mix(in srgb,var(--gold) 20%,transparent),transparent 70%);opacity:0;transition:opacity .3s}
+.card:hover{border-color:var(--gold);transform:translateY(-4px)}
+.card:hover::before{opacity:1}
+.card>*{position:relative}
+.card h3{font:600 1.2rem var(--serif);margin:0 0 8px}
+.card p{margin:0;color:var(--muted);font-size:.94rem}
+.card.wide{grid-column:span 2}
+.projs{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;perspective:1100px}
+.proj{padding:28px;border:1px solid var(--line);border-radius:22px;background:var(--panel);position:relative;overflow:hidden;transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .25s ease-out,border-color .3s,box-shadow .3s}
+.proj:hover{border-color:var(--gold);box-shadow:0 22px 50px color-mix(in srgb,var(--gold) 16%,transparent)}
+.proj::before{content:"";position:absolute;left:0;top:0;height:3px;width:100%;background:linear-gradient(90deg,var(--gold),var(--ice))}
+.proj h3{font:600 1.35rem/1.25 var(--serif);margin:6px 0 12px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0 0 16px;list-style:none}
+.tags li{font-size:.78rem;padding:3px 10px;border-radius:99px;border:1px solid var(--line);color:var(--muted);transition:.2s}
+.tags li:hover{border-color:var(--gold);color:var(--gold)}
+.proj ul.pts{margin:0;padding-left:1.1em;color:var(--muted);font-size:.94rem}
+.proj ul.pts li{margin:0 0 7px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.two .card p{margin-bottom:2px}
+.badge{display:inline-block;margin-top:10px;padding:3px 12px;border:1px solid #35C58B;color:#35C58B;border-radius:99px;font-size:.84rem;font-weight:600}
+.contact{text-align:center;padding:110px 0 70px}
+.contact h2{font-size:clamp(2.4rem,6vw,4.2rem)}
+.contact .sub2{margin-inline:auto}
+.contact .btns{justify-content:center}
+footer{padding:26px 0 36px;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem;text-align:center}
+.js .rv:not(.in){opacity:0}
+.js .rv.in{animation:rise .8s cubic-bezier(.2,.7,.2,1) var(--d,0ms) backwards}
+@keyframes rise{from{opacity:0;transform:translateY(30px)}}
+@media (max-width:820px){.hero .wrap,.two,.projs{grid-template-columns:1fr}.bento{grid-template-columns:1fr 1fr}.card.wide{grid-column:span 2}.top nav a{display:none}.hero{min-height:0}}
+@media (max-width:520px){.bento,.stats{grid-template-columns:1fr}.card.wide{grid-column:auto}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}h1 .c{opacity:1;transform:none}svg .pkt{display:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div id="glow"></div>
+<div class="top"><div class="wrap"><a class="logo" href="#top">B. P. Swain</a>
+<nav aria-label="Sections"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a><button id="th" aria-label="Switch light or dark theme">◐</button></nav></div></div>
+
+<header class="hero" id="top">
+<canvas id="net" aria-hidden="true"></canvas>
+<div class="wrap">
+<div>
+<p class="open"><span class="dot"></span>Open to Cloud &amp; DevOps roles</p>
+<h1 id="nm" aria-label="Biraja Prasad Swain">Biraja Prasad Swain</h1>
+<p class="role">Cloud &amp; DevOps Engineer</p>
+<p class="type" aria-hidden="true"><span id="t">Terraform and Ansible for infrastructure as code</span><i class="caret"></i></p>
+<p class="lede">I build CI/CD and GitOps pipelines, deploy applications on Kubernetes, and write infrastructure as code so cloud and server setups can be rebuilt from Git.</p>
+<div class="btns"><a class="btn main mag" href="mailto:birajaprasadswain.dev@gmail.com">Email me</a><a class="btn alt mag" href="https://github.com/birajaprasadswain4-dot">GitHub</a><a class="btn alt mag" href="https://www.linkedin.com/in/biraja-prasad-swain/">LinkedIn</a></div>
+</div>
+<figure>
+<svg viewBox="0 0 420 330" role="img" aria-label="Diagram of my AWS 3-tier project: internet, load balancer, web tier in public subnets, app and database tiers in private subnets">
+<rect class="zone" x="8" y="104" width="404" height="62" rx="10"/><rect class="zone" x="8" y="184" width="404" height="140" rx="10"/>
+<text class="sub" x="18" y="120">Public subnets</text><text class="sub" x="18" y="200">Private subnets</text>
+<rect class="box" x="140" y="8" width="140" height="34" rx="8"/><text x="210" y="30" text-anchor="middle">Internet</text>
+<rect class="box" x="120" y="56" width="180" height="34" rx="8"/><text x="210" y="78" text-anchor="middle">Application Load Balancer</text>
+<rect class="box" x="100" y="124" width="220" height="34" rx="8"/><text x="210" y="146" text-anchor="middle">Web tier · Auto Scaling</text>
+<rect class="box" x="100" y="212" width="220" height="34" rx="8"/><text x="210" y="234" text-anchor="middle">App tier · EC2</text>
+<rect class="box" x="100" y="276" width="220" height="34" rx="8"/><text x="210" y="298" text-anchor="middle">Database tier</text>
+<path class="flow" d="M210 42V56"/><path class="flow" d="M210 90V124"/><path class="flow" d="M210 158V212"/><path class="flow" d="M210 246V276"/>
+<circle class="pkt" r="5"><animateMotion dur="3s" repeatCount="indefinite" path="M210 42V276"/></circle><circle class="pkt" r="5"><animateMotion dur="3s" begin="1.5s" repeatCount="indefinite" path="M210 42V276"/></circle>
+</svg>
+<figcaption>My AWS 3-tier project, defined in Terraform modules.</figcaption>
+</figure>
+</div>
+</header>
+
+<div class="marq" aria-hidden="true"><div id="mq"></div></div>
+
+<main class="wrap">
+<section id="about">
+<h2>Infrastructure that rebuilds itself</h2>
+<p class="sub2">I prefer code over console clicks. Terraform and Ansible set things up, pipelines ship them, and Prometheus and Grafana show how they run.</p>
+<div class="stats">
+<div class="stat"><b data-n="4">0</b><span>Hands-on projects</span></div>
+<div class="stat"><b data-n="16">0</b><span>AWS services used</span></div>
+<div class="stat"><b data-n="6">0</b><span>Monitoring and logging tools</span></div>
+</div>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<p class="sub2">The tools I use to build, ship and watch infrastructure.</p>
+<div class="bento">
+<div class="card wide"><h3>Cloud (AWS)</h3><p>EC2, VPC, S3, IAM, CloudFront, Load Balancer, Auto Scaling, Transit Gateway, WAF, Inspector, CloudTrail, RDS, Lambda, CloudWatch, Route 53, ACM</p></div>
+<div class="card"><h3>CI/CD</h3><p>GitHub Actions, Jenkins pipelines, SonarQube</p></div>
+<div class="card"><h3>Infrastructure as Code</h3><p>Terraform (modules, workspaces, S3 remote state, DynamoDB locking), Ansible (roles, Vault, EC2 dynamic inventory)</p></div>
+<div class="card wide"><h3>Containers &amp; Kubernetes</h3><p>Docker, Kubernetes, Amazon EKS, ECR, Helm, Argo CD, RBAC, HPA, Cluster Autoscaler, StatefulSets</p></div>
+<div class="card wide"><h3>Monitoring &amp; logging</h3><p>Prometheus, Grafana, Alertmanager, PagerDuty, Dynatrace, CloudWatch, EFK Stack</p></div>
+<div class="card"><h3>Linux &amp; data</h3><p>Linux administration, Bash, YAML, Git, Amazon RDS, MySQL, MariaDB</p></div>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<p class="sub2">Four builds, each one deployed and tested end to end.</p>
+<div class="projs">
+<article class="proj"><h3>CI/CD &amp; GitOps Pipeline</h3>
+<ul class="tags"><li>Jenkins</li><li>GitHub Actions</li><li>EKS</li><li>ECR</li><li>Argo CD</li><li>SonarQube</li><li>Ansible</li></ul>
+<ul class="pts"><li>Developed Jenkins pipelines that build, test and deploy the application automatically.</li><li>Configured GitHub Actions to lint, test and build a Docker image on every pull request.</li><li>Secured AWS access from CI with OIDC roles, so no long-lived keys are stored.</li><li>Deployed tagged ECR images to EKS with Argo CD, which syncs the cluster from Git.</li></ul></article>
+<article class="proj"><h3>AWS 3-Tier Architecture with Terraform</h3>
+<ul class="tags"><li>Terraform</li><li>VPC</li><li>ALB</li><li>Auto Scaling</li><li>IAM</li></ul>
+<ul class="pts"><li>Architected web, app and database tiers using reusable Terraform modules.</li><li>Designed a custom VPC across multiple AZs with public and private subnets.</li><li>Deployed an Application Load Balancer with Auto Scaling Groups for changing traffic.</li><li>Enforced least privilege with a Security Group per tier and scoped IAM roles.</li></ul></article>
+<article class="proj"><h3>Infrastructure Monitoring</h3>
+<ul class="tags"><li>Ansible</li><li>Prometheus</li><li>Grafana</li><li>Node Exporter</li></ul>
+<ul class="pts"><li>Authored an Ansible playbook that installs Node Exporter as a systemd service on EC2 instances.</li><li>Configured Prometheus with EC2 service discovery and PromQL queries for CPU, memory and disk I/O.</li><li>Built Grafana dashboards to track server health at a glance.</li></ul></article>
+<article class="proj"><h3>Linux Administration &amp; Scripting</h3>
+<ul class="tags"><li>Linux</li><li>Bash</li><li>cron</li><li>systemd</li><li>SSH</li></ul>
+<ul class="pts"><li>Administered users, groups and permissions on Ubuntu servers and enabled SSH key login.</li><li>Scripted Bash automation, scheduled with cron, for log rotation, disk alerts and health checks.</li><li>Hardened servers with UFW/iptables rules and Fail2ban.</li></ul></article>
+</div>
+</section>
+
+<section id="education">
+<h2>Education &amp; certification</h2>
+<div class="two" style="margin-top:30px">
+<div class="card"><h3>B.Tech in Computer Science, 2026</h3><p>Trident Academy of Technology · CGPA 7.03</p><p>Languages: Hindi, English</p></div>
+<div class="card"><h3>AWS Certified Cloud Practitioner</h3><p>Amazon Web Services</p><span class="badge">In progress</span></div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<h2>Let’s build something reliable</h2>
+<p class="sub2">I’m open to Cloud Support, Junior DevOps and Cloud Engineer roles. Email is the fastest way to reach me.</p>
+<div class="btns"><a class="btn main mag" href="mailto:birajaprasadswain.dev@gmail.com">birajaprasadswain.dev@gmail.com</a><a class="btn alt mag" href="https://www.linkedin.com/in/biraja-prasad-swain/">LinkedIn</a><a class="btn alt mag" href="https://github.com/birajaprasadswain4-dot">GitHub</a></div>
+</section>
+</main>
+<footer>© 2026 Biraja Prasad Swain · Hyderabad, India</footer>
+
+<script>
+(function(){
+var d=document,r=d.documentElement,rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+r.classList.add('js');
+var bar=d.createElement('div');bar.id='bar';d.body.appendChild(bar);
+function pg(){var h=r.scrollHeight-innerHeight;bar.style.transform='scaleX('+(h>0?Math.min(1,scrollY/h):0)+')'}
+addEventListener('scroll',pg,{passive:true});pg();
+d.getElementById('th').onclick=function(){var dk=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;r.dataset.theme=dk?'light':'dark'};
+var nm=d.getElementById('nm'),txt=nm.textContent,k=0;nm.textContent='';
+txt.split(' ').forEach(function(w,wi){var s=d.createElement('span');s.className='w';s.setAttribute('aria-hidden','true');
+w.split('').forEach(function(c){var e=d.createElement('span');e.className='c';e.style.setProperty('--i',k++);e.textContent=c;s.appendChild(e)});
+nm.appendChild(s);if(wi<2)nm.appendChild(d.createTextNode(' '))});
+var mq=d.getElementById('mq'),T=['AWS','Terraform','Kubernetes','Docker','Jenkins','GitHub Actions','Argo CD','Ansible','Prometheus','Grafana','Helm','Linux','SonarQube','EKS'];
+mq.innerHTML=T.concat(T).map(function(x){return '<span>'+x+'</span>'}).join('');
+var els=d.querySelectorAll('section h2,.sub2,.stat,.card,.proj,.contact .btns');
+els.forEach(function(e,i){e.classList.add('rv');e.style.setProperty('--d',(i%3)*90+'ms')});
+var cnt=function(e){var n=+e.dataset.n,t0=null;function f(t){t0=t0||t;var p=Math.min(1,(t-t0)/1200);e.textContent=Math.round(n*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)}rm?e.textContent=n:requestAnimationFrame(f)};
+if(rm||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});d.querySelectorAll('[data-n]').forEach(cnt)}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');var c=x.target.querySelector('[data-n]');if(c)cnt(c);io.unobserve(x.target)}})},{threshold:.15});els.forEach(function(e){io.observe(e)})}
+addEventListener('pointermove',function(e){r.style.setProperty('--mx',e.clientX+'px');r.style.setProperty('--my',e.clientY+'px')},{passive:true});
+d.querySelectorAll('.card').forEach(function(c){c.addEventListener('pointermove',function(e){var b=c.getBoundingClientRect();c.style.setProperty('--x',e.clientX-b.left+'px');c.style.setProperty('--y',e.clientY-b.top+'px')})});
+if(!rm){
+d.querySelectorAll('.proj').forEach(function(c){c.addEventListener('pointermove',function(e){var b=c.getBoundingClientRect(),x=(e.clientX-b.left)/b.width-.5,y=(e.clientY-b.top)/b.height-.5;c.style.setProperty('--ry',(x*8)+'deg');c.style.setProperty('--rx',(-y*8)+'deg')});c.addEventListener('pointerleave',function(){c.style.setProperty('--rx','0deg');c.style.setProperty('--ry','0deg')})});
+d.querySelectorAll('.mag').forEach(function(b){b.addEventListener('pointermove',function(e){var q=b.getBoundingClientRect();b.style.transform='translate('+((e.clientX-q.left-q.width/2)*.2)+'px,'+((e.clientY-q.top-q.height/2)*.3)+'px)'});b.addEventListener('pointerleave',function(){b.style.transform=''})});
+var t=d.getElementById('t'),P=['Terraform and Ansible for infrastructure as code','Jenkins and GitHub Actions for CI/CD','EKS and Argo CD for GitOps','Prometheus and Grafana for monitoring'],i=0,j=0,del=false;
+(function tick(){var s=P[i];j+=del?-1:1;t.textContent=s.slice(0,j);var w=del?26:50;if(!del&&j===s.length){del=true;w=1700}else if(del&&j===0){del=false;i=(i+1)%P.length;w=350}setTimeout(tick,w)})();
+}
+var cv=d.getElementById('net'),cx=cv.getContext('2d'),W,H,N=[],m={x:-999,y:-999};
+function rs(){var b=cv.parentNode.getBoundingClientRect(),dp=Math.min(2,devicePixelRatio||1);W=b.width;H=b.height;cv.width=W*dp;cv.height=H*dp;cx.setTransform(dp,0,0,dp,0,0);N=[];for(var i=0;i<Math.min(80,W/13);i++)N.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35})}
+function col(){return getComputedStyle(r).getPropertyValue('--gold').trim()||'#E3BE76'}
+function draw(){var c=col();cx.clearRect(0,0,W,H);cx.fillStyle=c;cx.strokeStyle=c;
+for(var i=0;i<N.length;i++){var a=N[i];if(!rm){a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>W)a.vx*=-1;if(a.y<0||a.y>H)a.vy*=-1}
+cx.globalAlpha=.7;cx.beginPath();cx.arc(a.x,a.y,1.6,0,6.3);cx.fill();
+for(var j=i+1;j<N.length;j++){var b=N[j],dx=a.x-b.x,dy=a.y-b.y,q=dx*dx+dy*dy;if(q<14000){cx.globalAlpha=.22*(1-q/14000);cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(b.x,b.y);cx.stroke()}}
+var mx=a.x-m.x,my=a.y-m.y,mq2=mx*mx+my*my;if(mq2<20000){cx.globalAlpha=.5*(1-mq2/20000);cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(m.x,m.y);cx.stroke()}}
+if(!rm)requestAnimationFrame(draw)}
+cv.parentNode.addEventListener('pointermove',function(e){var b=cv.getBoundingClientRect();m.x=e.clientX-b.left;m.y=e.clientY-b.top});
+cv.parentNode.addEventListener('pointerleave',function(){m.x=m.y=-999});
+addEventListener('resize',rs);rs();draw();
+})();
+</script>
+</body>
+</html>
